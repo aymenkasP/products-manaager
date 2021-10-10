@@ -1,0 +1,45 @@
+.body {
+    width:300px;
+    background-color: rgb(246, 244, 244);
+    box-shadow:  5px 5px 10px #d9d9d9,
+             -5px -5px 10px #ffffff;
+             display: flex;
+             flex-direction: column;
+             transition: 0.8s;
+             padding:22px;
+             margin: 12px;
+}
+
+.body:hover {
+    box-shadow:  5px 5px 10px #b0c8d8,
+             -5px -5px 10px #cfcaff;
+             cursor: pointer;
+             
+}
+
+
+.info span { 
+    font-weight: bold;
+}
+
+.description {
+    background-color: #fbfbfb;
+    padding: 10px;
+}
+
+.card-btn {
+    display: flex;
+    justify-content: flex-end;
+}
+.btn-card {
+    border: none;
+    background-color: rgba(251, 135, 135, 0.931);
+    border-radius: 5px;
+    padding: 9px;
+    cursor: pointer;
+}
+
+.btn-card:hover {
+    background-color:rgb(253, 86, 86);
+    
+}

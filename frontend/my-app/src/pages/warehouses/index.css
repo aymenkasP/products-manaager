@@ -1,0 +1,13 @@
+.Warehouses {
+    display: flex;
+    flex-direction: column;
+    padding: 10px   30px;
+}
+
+
+.d-flex {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

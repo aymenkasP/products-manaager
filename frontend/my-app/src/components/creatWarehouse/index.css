@@ -1,0 +1,50 @@
+.form-create {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: rgb(246, 244, 244);
+    box-shadow:  5px 5px 10px #bababa,
+             -5px -5px 10px #ffffff;
+}
+
+.form-create p {
+    font-size: 15px;
+    padding:13px;
+    background-color: rgb(245, 92, 92);
+    margin:0;
+}
+
+.form-create input {
+    margin-top: 12px;
+    width: 50vw;
+    max-width: 300px;
+    height: 50px;
+    padding:5px 10px;
+    border: none;
+    outline: none;
+}
+
+.form-control {
+    background-color: rgb(37, 37, 37);
+    cursor: pointer;
+    color: white;
+
+   
+}
+
+.form-control:hover {
+    background-color: rgb(58, 57, 57);
+    color: rgb(110, 231, 195);
+}
+
+.form-create p  {
+    place-items: start;
+}
+
+
+.disabled {
+    background-color:rgb(238, 123, 123);
+    cursor: none;
+}

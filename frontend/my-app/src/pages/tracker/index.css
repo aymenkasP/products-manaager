@@ -1,0 +1,76 @@
+.tracker {
+    padding: 10px   30px;
+    height: 100vh;
+
+}
+
+.tracker-title {
+}
+
+
+.tracker-data {
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+
+}
+
+.tracker-data-info {
+    width: 22vw;
+    padding:12px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(246, 244, 244);
+    box-shadow:  5px 5px 10px #d9d9d9,
+             -5px -5px 10px #ffffff;
+    
+}
+
+.tracker-data-info p {
+    font-size:1.7rem;
+    font-weight: bold;
+    padding:0;
+    margin:0;
+}
+
+.lose {
+    color: rgb(247, 73, 73);
+}
+
+.profit {
+    color: rgb(93, 247, 73);
+}
+
+.tracker-stoke {
+    padding-bottom: 62px;
+}
+
+
+.tracker-stoke-title {
+}
+
+.tracker-stoke-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.tracker-stoke-btn button {
+    margin:5px 12px;
+    padding: 7px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition:700ms
+}
+
+.active-btn {
+    background-color:rgb(149, 192, 228);
+}
+
+.tracker-stoke- {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}

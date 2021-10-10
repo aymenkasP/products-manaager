@@ -1,0 +1,70 @@
+.sell {
+    display:grid;
+    place-items:center;
+    margin-top: 50px;
+    
+}
+
+.shadow {
+    background-color: rgb(246, 244, 244);
+    box-shadow:  5px 5px 10px #d9d9d9,
+             -5px -5px 10px #ffffff;
+             padding: 25px 50px;
+}
+
+.sell-stoke span {
+    font-weight: bold;
+}
+
+
+.sellInput label {
+    font-weight:bold;
+    margin : 5px
+}
+
+.sellInput input {
+    padding:5px;
+    width: 70px;
+    outline: none;
+    border: 0.5px solid black;
+    border-radius: 5px;
+}
+
+.margin_ {
+    margin: 5px;
+}
+
+.sell-btn {
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 12px;
+}
+
+.sell-btn button {
+    border: none;
+    padding :5px 12px;
+    background-color:rgb(29, 29, 29);
+    color: white;
+    cursor: pointer;
+    width: 80px;
+}
+
+
+.sell-btn button:hover {
+    border: none;
+    padding :5px 12px;
+    background-color:rgb(58, 56, 56);
+    color: rgb(233, 233, 233);
+    
+}
+
+
+.back-btn {
+    background-color: rgb(46, 45, 45);
+    color: aliceblue;
+    cursor: pointer;
+    margin: 12px;
+    width: 100%;
+    border: none;
+    padding:10px;
+}

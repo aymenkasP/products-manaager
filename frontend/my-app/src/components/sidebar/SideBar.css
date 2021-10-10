@@ -1,0 +1,61 @@
+
+.side p {
+    text-align: center;
+    padding: 1px 5px
+}
+
+.btn {
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    padding:12px;
+    box-shadow:  5px 5px 10px #bababa,
+             -5px -5px 10px #ffffff;
+             transition: 0.8s;
+
+   
+}
+
+.create-btn {
+    display: grid;
+    place-items: center;
+   
+    
+}
+.btn:hover {
+    box-shadow:  5px 5px 10px #8299ff,
+    -5px -5px 10px #ffffff;
+}
+
+.sidebar-btn {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+  padding: 0;
+}
+
+ul li { 
+    padding: 15px  ;
+    transition: 600ms;
+}
+
+a {
+    display: flex;
+    text-decoration: none;
+}
+
+a span {
+    margin-right: 1px;
+    font-weight: 500;
+    color: #000
+}
+
+.selected {
+    background-color: rgb(149, 192, 228);
+   border-radius: 5px;
+}

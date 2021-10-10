@@ -1,0 +1,57 @@
+.Notes-page {
+    padding: 10px   30px;
+    height: 100vh;
+    margin-bottom: 12px;
+}
+
+.Notes{
+     display: grid;
+    place-items: center;
+    
+}
+
+
+.Notes-create{
+    width: 100%;
+    padding: 15px;
+}
+
+.Notes-create textarea {
+    height: 300px;
+    width: 80%;
+    border: none;
+    outline: none;
+    padding: 12px;
+}
+
+.get-notes {
+    display:flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding-bottom: 62px;
+}
+
+.btn-notes {
+    border: none;
+    padding: 12px 20px;
+    margin: 12px 20px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.btn-notes-bg-dark {
+    background-color:rgb(32, 32, 32);
+    color: white;
+}
+
+.btn-notes-bg-red {
+    background-color:rgb(231, 121, 121);
+    color: white;
+
+}
+
+.btn-notes:hover {
+    background-color: rgb(235, 235, 235);
+    color: black;
+}
