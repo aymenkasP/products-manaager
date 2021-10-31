@@ -46,11 +46,9 @@ export function GetDataInByDate(user ,setIn7days,setIn30Days ,setInToday ) {
         user.dataOut?.forEach(item => {
               
                 const DaysT = moment(item.creatDate, "YYYYMMDD").fromNow();
-                console.log(DaysT.replace(/\D/g,'') )
 
                 
                     if(DaysT.replace(/\D/g,'') <= 7){
-                        console.log("DaysT[0]",DaysT[0])
                         setOut7days(oldArray => [...oldArray , item])
                         
 

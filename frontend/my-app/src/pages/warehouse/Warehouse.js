@@ -7,14 +7,11 @@ import Stokes from '../../components/GStoke/Stokes';
 import {useSelector , useDispatch } from 'react-redux'
 import {warehouseId } from '../../features/Stoke/stokeSlice'
 import {createStoke } from '../../features/warehouse/warehouseSlice'
-import useAuth from '../../service/useAuth';
 
 
 
 
 export default function Warehouse() {
-  const {user} =useAuth()
-
     const [data, setData] = useState([]);
 
 
@@ -28,7 +25,7 @@ export default function Warehouse() {
     useEffect(() => {
 
       try{ 
-        axios.get(`/warehouse/${id}`).then((r) => {
+        axios.get(`https://productsmanager.herokuapp.com/api/warehouse/${id}`).then((r) => {
           setData(r.data)
           dispatch(warehouseId({id, warehouseName:r.data.warehousesName}))
 
@@ -40,7 +37,6 @@ export default function Warehouse() {
                   
     }, [id,dispatch])
 
-    console.log(user.dataOut)
 
     return (
         <div className="warehouse">

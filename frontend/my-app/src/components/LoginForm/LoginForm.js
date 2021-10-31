@@ -21,7 +21,7 @@ export default function LoginForm() {
 
   async  function handleData(data) {
 
-     await axios.post('auth/login', {
+     await axios.post('https://productsmanager.herokuapp.com/api/auth/login', {
            ...data
          })
          .then(function (response) {

@@ -18,7 +18,7 @@ export default function WarehouseF() {
      
       function handleData(data) {
         
-          try {       axios.post(`/warehouse/add`,{userId:user._id,...data})
+          try {       axios.post(`https://productsmanager.herokuapp.com/api/warehouse/add`,{userId:user._id,...data})
           } catch (error) {
                   console.error(error);
           }

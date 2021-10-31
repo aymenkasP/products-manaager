@@ -5,11 +5,12 @@ import './index.css'
 
 export default function Warehouses() {
     const [warehouses, setWarehouses] = useState([]);
+    const id = "615c6e3ff77fd424b4ba2f83";
+
  
     useEffect(() => {
-        const userId = localStorage.getItem('userId');
         try {     
-                axios.get(`/warehouse/all/${userId.replace(/["']/g, "")}`).then((r)=> { 
+                axios.get(`https://productsmanager.herokuapp.com/api/warehouse/all/${id}`).then((r)=> { 
                         setWarehouses(r.data)
                         
                     })

@@ -9,20 +9,20 @@ export default function useAuth() {
   const [user, setUser] = useState([]);
   const [currency, setCurrency] = useState(null);
   const [error, setError] = useState(null);
-  const id = "615c6e3ff77fd424b4ba2f83";
   const history = useHistory()
+  const id = "615c6e3ff77fd424b4ba2f83";
 
   function logout() {
     localStorage.removeItem('userId');
     history.push('/login')
-    setIsOnline(false);
+    setIsOnline(false); 
  }
   useEffect(() => {
 
       try {
 
         if(id){
-            axios.get(`/users/${id?.replace(/['"]+/g, '')}`)
+            axios.get(`https://productsmanager.herokuapp.com/api/users/${id}`)
               .then((r) => {
                   setUser(r.data);
                   setCurrency(r.data.currency)

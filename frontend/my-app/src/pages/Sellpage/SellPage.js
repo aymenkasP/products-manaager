@@ -27,12 +27,12 @@ export default function SellPage() {
     function sell(){
         try{ 
             
-        axios.put(`/stoke/${_id}`,{unit : unit - SellQuantity })
-        axios.put(`/dataTracker/${user._id}/out-data`,{ SellPrice , SellQuantity ,
+        axios.put(`https://productsmanager.herokuapp.com/api/stoke/${_id}`,{unit : unit - SellQuantity })
+        axios.put(`https://productsmanager.herokuapp.com/api/dataTracker/${user._id}/out-data`,{ SellPrice , SellQuantity ,
              StokeName , profitOrLose : SellPrice - price ,
               price , warehouseId : warehouseInf.id , warehouseName : warehouseInf.warehouseName,creatDate : new Date(Today)})
             if(SellQuantity === unit){
-                 axios.delete(`/stoke/${_id}`) 
+                 axios.delete(`https://productsmanager.herokuapp.com/api/stoke/${_id}`) 
             }
             
 

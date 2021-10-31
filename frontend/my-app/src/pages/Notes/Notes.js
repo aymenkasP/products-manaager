@@ -21,7 +21,7 @@ export default function Notes() {
 
     function handleData(data) {
       
-        try {       axios.post(`/notes/create`,{userId:user._id,...data}).then(res=> {
+        try {   axios.post(`https://productsmanager.herokuapp.com/api/notes/create`,{userId:user._id,...data}).then(res=> {
             setNotesCreated(res.data)
             setCreateSection(false)
             console.log(res.data)
@@ -36,7 +36,7 @@ export default function Notes() {
 
         try {     
             setIsLoading(true);
-            axios.get(`/notes/${user._id}`).then((res) => {
+            axios.get(`https://productsmanager.herokuapp.com/api/notes/${user._id}`).then((res) => {
             setNotes(res.data)
             setIsLoading(false);
         })

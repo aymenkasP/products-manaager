@@ -14,6 +14,7 @@ import Notes from './pages/Notes/Notes';
 import SellPage from './pages/Sellpage/SellPage';
 import Tracker from './pages/tracker/Tracker';
 import BottomNavigation from './components/BottomNavigation/BottomNavigation';
+import Home from './pages/home/Home';
 function App() {
   const id = localStorage.getItem('userId')
   const {isOnline} = useAuth(id) 
@@ -60,6 +61,7 @@ function App() {
           <Route path="/login" component ={Login} />
 
           <PrivateRoute>
+          <Route path="/" exact component ={Home} />
           <Route path="/warehouses" component ={Warehouses} />
           <Route path="/creat-warehouse" component ={CreateWhs} />
           <Route path="/warehouse/:id" component ={Warehouse} />

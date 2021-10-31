@@ -10,7 +10,7 @@ export default function Stokes({warehouseName}) {
 
     const [data, setData] = useState([])
     const [IsLoading, setIsLoading] = useState(true)
-    const userId = localStorage.getItem('userId');
+    const id = "615c6e3ff77fd424b4ba2f83";
     const Refresh = useSelector(state => state.warehouse.Refresh)
 
     const {currency} = useAuth()
@@ -19,7 +19,7 @@ export default function Stokes({warehouseName}) {
 
         try{
            
-            axios.get(`/stoke/${userId.replace(/["']/g, "")}`).then((response) => {
+            axios.get(`https://productsmanager.herokuapp.com/api/stoke/${id}`).then((response) => {
                 setData(response.data.filter(item => item.warehouseName === warehouseName));
                 setIsLoading(false)
             })  
@@ -28,7 +28,7 @@ export default function Stokes({warehouseName}) {
   }
         
                  
-},[warehouseName,userId,Refresh])
+},[warehouseName,Refresh])
     return (
         
         <div className='container-stoke'>

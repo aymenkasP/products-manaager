@@ -19,7 +19,7 @@ export default function SignupForm() {
     
    
       async function createUser(data){
-      await axios.post('/auth/register', {
+      await axios.post('https://productsmanager.herokuapp.com/api/auth/register', {
           ...data
         })
         .then(function (response) {

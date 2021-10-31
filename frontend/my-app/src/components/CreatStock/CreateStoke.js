@@ -22,12 +22,12 @@ export default function CreateStok({warehouseName}) {
 
         function handelStokeData(data){
                 try {
-                    axios.post(`/stoke/create`,{userId:user._id,warehouseName,...data}).then(res =>{
+                    axios.post(`https://productsmanager.herokuapp.com/api/stoke/create`,{userId:user._id,warehouseName,...data}).then(res =>{
                       dispatch(Refresh(res.data))
                      dispatch(createStoke(false))
                     })
 
-                    axios.put(`/dataTracker/${user._id}/in-data`,{warehouseName,creatDate : new Date(Today),...data})
+                    axios.put(`https://productsmanager.herokuapp.com/api/dataTracker/${user._id}/in-data`,{warehouseName,creatDate : new Date(Today),...data})
                     
                 } catch (error) {
                     console.error(error);
