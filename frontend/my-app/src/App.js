@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import {Switch, Route} from "react-router-dom";
+import {Switch, Route,Redirect} from "react-router-dom";
 import Signup from "./pages/signup/Signup"
 import Login from './pages/login/Login';
 import Appbar from './components/Appbar/Appbar';
@@ -14,7 +14,9 @@ import Notes from './pages/Notes/Notes';
 import SellPage from './pages/Sellpage/SellPage';
 import Tracker from './pages/tracker/Tracker';
 import BottomNavigation from './components/BottomNavigation/BottomNavigation';
-import Home from './pages/home/Home';
+
+
+
 function App() {
   const id = localStorage.getItem('userId')
   const {isOnline} = useAuth(id) 
@@ -47,12 +49,10 @@ function App() {
   return (
     <div className="App">
       <Appbar />
-     <div className="main" >
-                  <div className= {`sidebar ${!isOnline  && "d-no"} ${!activeMenu && "d-no"} `}>
-                   <SideBar  />
-                  </div>  
-               
-
+        <div className="main" >
+                      <div className= {`sidebar ${!isOnline  && "d-no"} ${!activeMenu && "d-no"} `}>
+                      <SideBar  />
+                      </div>  
             <div  className= {`body-text ${isOnline && "margin"} ${!activeMenu && "no-margin "}`}>
             
        <Switch>
@@ -61,7 +61,7 @@ function App() {
           <Route path="/login" component ={Login} />
 
           <PrivateRoute>
-          <Route path="/" exact component ={Home} />
+          <Redirect from="/" to="/warehouses" />
           <Route path="/warehouses" component ={Warehouses} />
           <Route path="/creat-warehouse" component ={CreateWhs} />
           <Route path="/warehouse/:id" component ={Warehouse} />
