@@ -24,7 +24,6 @@ export default function Notes() {
         try {   axios.post(`https://productsmanager.herokuapp.com/api/notes/create`,{userId:user._id,...data}).then(res=> {
             setNotesCreated(res.data)
             setCreateSection(false)
-            console.log(res.data)
         })
         } catch (error) {
                 console.error(error);

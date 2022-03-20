@@ -14,7 +14,7 @@ export default function NotesCard({body,id}) {
 
     console.log('deleteNote')
       
-    try {       axios.delete(`/notes/${id}`).then(res=> {
+    try {       axios.delete(`https://productsmanager.herokuapp.com/api/notes/${id}`).then(res=> {
                      dispatch(isNoteDeleted(res.data));
     })
     } catch (error) {
